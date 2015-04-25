@@ -1,0 +1,39 @@
+BAS_X
+The Standard of Deviation of the X value for the Body Acceleration 
+BAS_Y
+The Standard of Deviation of the Y value for the Body Acceleration 
+BAS_Z
+The Standard of Deviation  of the Z value for the Body Acceleration 
+GAS_X
+The Standard of Deviation  of the X value for the Gravity Acceleration
+GAS_Y
+The Standard of Deviation of the Y value for the Gravity Acceleration 
+GAS_Z
+The Standard of Deviation  of the Z value for the Gravity Acceleration 
+BAJS_X
+The Standard of Deviation  of the X value for the Body Acceleration Jerk
+BAJS_Y
+The Standard of Deviation of the Y value for the Body Acceleration Jerk
+BAJS_Z
+The Standard of Deviation  of the Z value for the Body Acceleration Jerk 
+BGS_X
+The Standard of Deviation  of the X value for the Body Gyro
+BGS_Y
+The Standard of Deviation of the Y value for the Body Gyro
+BGS_Z
+The Standard of Deviation  of the Z value for the Body Gyro
+BGJS_X
+The Standard of Deviation  of the X value for the Body Gyro Jerk
+BGJS_Y
+The Standard of Deviation of the Y value for the Body Gyro Jerk
+BGJS_Z
+The Standard of Deviation  of the Z value for the Body Gyro Jerk
+BAMS
+The Standard of Deviation of the Body Acceleration Magnitude
+GAMS
+The Standard of Deviation of the Gravity Acceleration Magnitude
+BAJMS
+The Standard of Deviation of the Body Acceleration  Jerk Magnitude
+BGMS
+The Standard of Deviation of the Body Gyro Magnitude
+BGJMS

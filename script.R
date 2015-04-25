@@ -1,5 +1,9 @@
+\name{samsung}
+\alias{samsung}
+\title{samsung cleaning script}
+{library(data.table)
 library(dplyr)
-library(data.table)
+library(data.frame)
 ##files
 ("~/Downloads/UCI HAR Dataset/features.txt") -> labels_doc
 ("~/Downloads/UCI HAR Dataset 2/activity_labels.txt") -> activity_labels_doc
@@ -57,5 +61,5 @@ aggregate(laying, by=list(laying$subject), FUN=mean, rm.na=TRUE) -> mean_laying;
 aggregate(Walking, by=list(Walking$subject), FUN=mean, rm.na=TRUE) -> mean_walking; mean_walking$activity <- c("Walking")
 aggregate(walking_upstairs, by=list(walking_upstairs$subject), FUN=mean, rm.na=TRUE) -> mean_walking_up; mean_walking_up$activity <- c("Walking Upstairs")
 mergedMeans = rbind(mean_walking_up, mean_walking, mean_laying, mean_sitting, mean_standing, mean_walking_downstairs)
-arrange(mergedMeans, by=mergedMeans$subject)
+arrange(mergedMeans, by=mergedMeans$subject)}
 
