@@ -45,8 +45,17 @@ test_train$activity <- ifelse(test_train$V1 == 1, c("Walking"), ifelse(test_trai
 stds_means$activity <- test_train$activity 
 stds_means$subject <- test_train$subject
 ## calculating the averages for each variable by type
-aggregate(stds_means, by=list(stds_means$activity), FUN=mean, rm.na=TRUE) -> almost_tidy
-
-
-
-
+stds_means[which(stds_means$activity=="Laying"), ] -> laying
+stds_means[which(stds_means$activity=="Walking"), ] -> Walking
+stds_means[which(stds_means$activity=="Walking Downstairs"), ] -> walking_downstairs
+stds_means[which(stds_means$activity=="Standing"), ] -> standing
+stds_means[which(stds_means$activity=="Walking Upstairs"), ] -> walking_upstairs
+stds_means[which(stds_means$activity=="Sitting"), ] -> sitting
+aggregate(walking_downstairs, by=list(walking_downstairs$subject), FUN=mean, rm.na=TRUE) -> mean_walking_downstairs; mean_walking_downstairs$activity <- c("Walking Downstairs")
+aggregate(standing, by=list(standing$subject), FUN=mean, rm.na=TRUE) -> mean_standing; mean_standing$activity <- c("Standing")
+aggregate(sitting, by=list(sitting$subject), FUN=mean, rm.na=TRUE) -> mean_sitting; mean_sitting$activity <- c("Sitting")
+aggregate(laying, by=list(laying$subject), FUN=mean, rm.na=TRUE) -> mean_laying; mean_laying$activity <- c("Laying")
+aggregate(Walking, by=list(Walking$subject), FUN=mean, rm.na=TRUE) -> mean_walking; mean_walking$activity <- c("Walking")
+aggregate(walking_upstairs, by=list(walking_upstairs$subject), FUN=mean, rm.na=TRUE) -> mean_walking_up; mean_walking_up$activity <- c("Walking Upstairs")
+mergedMeans = rbind(mean_walking_up, mean_walking, mean_laying, mean_sitting, mean_standing, mean_walking_downstairs)
+arrange(mergedMeans, by=mergedMeans$subject)
