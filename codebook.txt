@@ -12,22 +12,22 @@ These three make up the mean of the Standard of Deviation measures for the XYZ c
  [6] "fSTDGravityAccelerationX,"                  
  [7] "fSTDGravityAccelerationY"                   
  [8] "fSTDGravityAccelerationZ"    
-These three make up the Standard of Deviation measures for the XYZ coordinates of Gravity Acceleration this is measured in frequency and the mean was calculated per subject.
+These three make up the Standard of Deviation measures for the XYZ coordinates of Gravity Acceleration this is measured in frequency and the mean was calculated per subject. The Fast Fourier Transform was used to create these.
                
  [9] "fSTDBodyAccelerationJerkX"                  
 [10] "fSTDBodyAccelerationJerkY"                  
 [11] "fSTDBodyAccelerationJerkZ"
- These three make up the Standard of Deviation measures for the XYZ coordinates of Body Acceleration Jerk measure this is measured in frequency and the mean was calculated per subject.   
+ These three make up the Standard of Deviation measures for the XYZ coordinates of Body Acceleration Jerk measure this is measured in frequency and the mean was calculated per subject.   The Fast Fourier Transform was used to create these.
              
 [12] "fSTDBodyGyroX"                              
 [13] "fSTDBodyGyroY"                              
 [14] "fSTDBodyGyroZ"
- These three make up the Standard of Deviation measures for the XYZ coordinates of Body Gyro measure this is measured in frequency  and the mean was calculated per subject.
+ These three make up the Standard of Deviation measures for the XYZ coordinates of Body Gyro measure this is measured in frequency  and the mean was calculated per subject. The Fast Fourier Transform was used to create these.
                               
 [15] "fSTDBodyGyroJerkX"                          
 [16] "fSTDBodyGyroJerkY"                          
 [17] "fSTDBodyGyroJerkZ"   
- These three make up the Standard of Deviation measures for the XYZ coordinates of Body Gyro Jerk measure this is measured in frequency  and the mean was calculated per subject.
+ These three make up the Standard of Deviation measures for the XYZ coordinates of Body Gyro Jerk measure this is measured in frequency  and the mean was calculated per subject. The Fast Fourier Transform was used to create these.
                        
 [18] "fSTDBodyAccelerationMagnitude"    
 This is the mean of the magnitude Body Acceleration Standard of Deviation and the mean was calculated per subject.
@@ -44,22 +44,22 @@ This is the mean of the magnitude Body Acceleration Jerk Standard of Deviation a
 [22] "fMeanBodyAccelerationFrequencyX"            
 [23] "fMeanBodyAccelerationFrequencyY"            
 [24] "fMeanBodyAccelerationFrequencyZ"  
-These three make up the mean of the frequency(statistical not unit) measures for the XYZ coordinates of Body Acceleration this is measured in frequency and the mean was calculated per subject.
+These three make up the mean of the frequency(statistical not unit) measures for the XYZ coordinates of Body Acceleration this is measured in frequency and the mean was calculated per subject. The Fast Fourier Transform was used to create these.
           
 [25] "fMeanBodyAccelerationJerkX"                 
 [26] "fMeanBodyAccelerationJerkY"                 
 [27] "fMeanBodyAccelerationJerkZ" 
-These three make up the mean of all the mean of the  measures for the XYZ coordinates of Body Acceleration Jerk this is measured in frequency and the mean was calculated per subject.
+These three make up the mean of all the mean of the  measures for the XYZ coordinates of Body Acceleration Jerk this is measured in frequency and the mean was calculated per subject.The Fast Fourier Transform was used to create these.
                           
 [28] "fMeanBodyGyroX"                             
 [29] "fMeanBodyGyroY"                             
 [30] "fMeanBodyGyroZ"   
-These three make up the mean of all the mean of the measures for the XYZ coordinates of Body Gyro this is measured in frequency and the mean was calculated per subject.
+These three make up the mean of all the mean of the measures for the XYZ coordinates of Body Gyro this is measured in frequency and the mean was calculated per subject.The Fast Fourier Transform was used to create these.
                           
 [31] "fMeanBodyGyroFreqX"                         
 [32] "fMeanBodyGyroFreqY"                         
 [33] "fMeanBodyGyroFreqZ"  
-These three make up the mean of all the mean of the measures for the XYZ coordinates of Body Gyro this is measured in frequency and the mean was calculated per subject.
+These three make up the mean of all the mean of the measures for the XYZ coordinates of Body Gyro this is measured in frequency and the mean was calculated per subject.The Fast Fourier Transform was used to create these.
                        
 [34] "fMeanBodyAccelerationMagnitude" 
 This is the mean of the magnitude Body Acceleration Mean and the mean was calculated per subject the unit of measure is frequency.            
@@ -91,36 +91,55 @@ These three make up the mean of the Standard of Deviation measures for the XYZ c
                       
 [46] "tSTDGravityAccelerationX"                   
 [47] "tSTDGravityAccelerationY"                   
-[48] "tSTDGravityAccelerationZ"                   
+[48] "tSTDGravityAccelerationZ"  
+These three make up the mean of the Standard of Deviation measures for the XYZ coordinates of Gravity Acceleration this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity.  
+               
 [49] "tSTDBodyAccelerationJerkX"                  
 [50] "tSTDBodyAccelerationJerkY"                  
-[51] "tSTDBodyAccelerationJerkZ"                  
+[51] "tSTDBodyAccelerationJerkZ" 
+These three make up the mean of the Standard of Deviation measures for the XYZ coordinates of Body Acceleration Jerk this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity.  
+                 
 [52] "tSTDBodyGyroX"                              
 [53] "tSTDBodyGyroY"                              
-[54] "tSTDBodyGyroZ"                              
+[54] "tSTDBodyGyroZ" 
+These three make up the mean of the Standard of Deviation measures for the XYZ coordinates of Body Gyro this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity. 
+                             
 [55] "tSTDBodyGyroJerkX"                          
 [56] "tSTDBodyGyroJerkY"                          
-[57] "tSTDBodyGyroJerkZ"                          
+[57] "tSTDBodyGyroJerkZ"  
+These three make up the mean of the Standard of Deviation measures for the XYZ coordinates of Body Gyro Jerk this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity.
+                        
 [58] "tSTDBodyAccelerationMagnitude"              
 [59] "tSTDGravityAccelerationMagnitude"           
 [60] "tSTDBodyAccelerationJerkMagnitude"          
 [61] "tSTDBodyGyroMagnitude"                      
-[62] "tSTDGyroMagnitudeJerk"                      
+[62] "tSTDGyroMagnitudeJerk"  
+                    
 [63] "tMeanBodyAccelerationX"                     
 [64] "tMeanBodyAccelerationY"                     
-[65] "tMeanBodyAccelerationZ"                     
+[65] "tMeanBodyAccelerationZ"   
+These three make up the mean of the mean measures for the XYZ coordinates of Body Acceleration this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity. 
+                 
 [66] "tMeanGravityAccelerationX"                  
 [67] "tMeanGravityAccelerationY"                  
-[68] "tMeanGravityAccelerationZ"                  
+[68] "tMeanGravityAccelerationZ" 
+These three make up the mean of the mean measures for the XYZ coordinates of Gravity Acceleration this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity. 
+                 
 [69] "tMeanBodyAccelerationJerkX"                 
 [70] "tMeanBodyAccelerationJerkY"                 
-[71] "tMeanBodyAccelerationJerkZ"                 
+[71] "tMeanBodyAccelerationJerkZ"   
+These three make up the mean of the mean measures for the XYZ coordinates of Body Acceleration Jerk this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity. 
+              
 [72] "tMeanBodyGyroX"                             
 [73] "tMeanBodyGyroY"                             
-[74] "tMeanBodyGyroZ"                             
+[74] "tMeanBodyGyroZ"
+These three make up the mean of the mean measures for the XYZ coordinates of Body Gyro this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity. 
+                             
 [75] "tMeanBodyGyroJerkX"                         
 [76] "tMeanBodyGyroJerkY"                         
-[77] "tMeanBodyGyroJerkZ"                         
+[77] "tMeanBodyGyroJerkZ" 
+ These three make up the mean of the mean measures for the XYZ coordinates of Body Gyro Jerk this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity. 
+                       
 [78] "tMeanBodyAccelerationMagnitude"             
 [79] "tMeanGravityAccelerationMagnitude"          
 [80] "tMeanBodyAccelerationJerkMagnitude"         
