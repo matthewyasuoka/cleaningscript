@@ -1,14 +1,17 @@
 library(data.table)
 library(dplyr)
+##error
+error1 = "no UCI HAR file in working directory. Please set your working directory to the one containing the folder 'UCI HAR Dataset'"
+if (!file.exists("./UCI HAR Dataset")) {error1}
 ##files
-("~/Downloads/UCI HAR Dataset/features.txt") -> labels_doc
-("~/Downloads/UCI HAR Dataset 2/activity_labels.txt") -> activity_labels_doc
-("~/Downloads/UCI HAR Dataset 2/test/X_test.txt") -> x_test_doc
-file.y_test <- ("~/Downloads/UCI HAR Dataset/test/y_test.txt")
-("~/Downloads/UCI HAR Dataset/train/X_train.txt") -> file.x.train
-file.y_train <- ("~/Downloads/UCI HAR Dataset/train/y_train.txt")
-subject_test_doc <- ("~/Downloads/UCI HAR Dataset/test/subject_test.txt")
-subject_train_doc <- ("~/Downloads/UCI HAR Dataset/train/subject_train.txt")
+("./UCI HAR Dataset/features.txt") -> labels_doc
+("./UCI HAR Dataset/activity_labels.txt") -> activity_labels_doc
+("./UCI HAR Dataset/test/X_test.txt") -> x_test_doc
+file.y_test <- ("./UCI HAR Dataset/test/y_test.txt")
+("./UCI HAR Dataset/train/X_train.txt") -> file.x.train
+file.y_train <- ("./UCI HAR Dataset/train/y_train.txt")
+subject_test_doc <- ("./UCI HAR Dataset/test/subject_test.txt")
+subject_train_doc <- ("./UCI HAR Dataset/train/subject_train.txt")
 ##labels
 read.table(labels_doc) -> xlabels
 read.table(activity_labels_doc) -> activity_labels
@@ -57,5 +60,17 @@ aggregate(laying, by=list(laying$subject), FUN=mean, rm.na=TRUE) -> mean_laying;
 aggregate(Walking, by=list(Walking$subject), FUN=mean, rm.na=TRUE) -> mean_walking; mean_walking$activity <- c("Walking")
 aggregate(walking_upstairs, by=list(walking_upstairs$subject), FUN=mean, rm.na=TRUE) -> mean_walking_up; mean_walking_up$activity <- c("Walking Upstairs")
 mergedMeans = rbind(mean_walking_up, mean_walking, mean_laying, mean_sitting, mean_standing, mean_walking_downstairs)
-arrange(mergedMeans, by=mergedMeans$subject)
+arrange(mergedMeans, by=mergedMeans$subject) -> mergedMeans
+##one more categorical variable
+mergedMeans[, c(1:22, 36:55, 82:83)] -> mergedMeansT
+mergedMeans[,c(1, 23:35, 56:83)] -> mergedMeansF
+names(mergedMeansT) <- c("Group","id","tSTDBodyAccelerationX",
+"tSTDBodyAccelerationY","tSTDBodyAccelerationZ","tSTDGravityAccelerationX","tSTDGravityAccelerationY","tSTDGravityAccelerationZ","tSTDBodyAccelerationJerkX","tSTDBodyAccelerationJerkY","tSTDBodyAccelerationJerkZ","tSTDBodyGyroX","tSTDBodyGyroY","tSTDBodyGyroZ","tSTDBodyGyroJerkX","tSTDBodyGyroJerkY","tSTDBodyGyroJerkZ","tSTDBodyAccelerationMagnitude","tSTDGravityAccelerationMagnitude","tSTDBodyAccelerationJerkMagnitude","tSTDBodyGyroMagnitude","tSTDGyroMagnitudeJerk","tMeanBodyAccelerationX","tMeanBodyAccelerationY","tMeanBodyAccelerationZ","tMeanGravityAccelerationX","tMeanGravityAccelerationY","tMeanGravityAccelerationZ","tMeanBodyAccelerationJerkX","tMeanBodyAccelerationJerkY","tMeanBodyAccelerationJerkZ","tMeanBodyGyroX","tMeanBodyGyroY","tMeanBodyGyroZ","tMeanBodyGyroJerkX","tMeanBodyGyroJerkY","tMeanBodyGyroJerkZ","tMeanBodyAccelerationMagnitude","tMeanGravityAccelerationMagnitude","tMeanBodyAccelerationJerkMagnitude","tMeanBodyGyroMagnitude","tMeanGyroMagnitudeJerk","activity","subject")
+names(mergedMeansF) <- c("Group", "fSTDBodyAccelerationX","fSTDBodyAccelerationY",
+"fSTDBodyAccelerationZ","fSTDGravityAccelerationX,","fSTDGravityAccelerationY","fSTDGravityAccelerationZ","fSTDBodyAccelerationJerkX","fSTDBodyAccelerationJerkY","fSTDBodyAccelerationJerkZ","fSTDBodyGyroX","fSTDBodyGyroY","fSTDBodyGyroZ","fSTDBodyGyroJerkX","fSTDBodyGyroJerkY","fSTDBodyGyroJerkZ","fSTDBodyAccelerationMagnitude","fSTDBodyAccelerationJerkMagnitude","fSTDBodyGyroMagnitude","fSTDGyroMagnitudeJerk","fMeanBodyAccelerationFrequencyX","fMeanBodyAccelerationFrequencyY","fMeanBodyAccelerationFrequencyZ","fMeanBodyAccelerationJerkX","fMeanBodyAccelerationJerkY","fMeanBodyAccelerationJerkZ","fMeanBodyGyroX","fMeanBodyGyroY","fMeanBodyGyroZ","fMeanBodyGyroFreqX","fMeanBodyGyroFreqY","fMeanBodyGyroFreqZ","fMeanBodyAccelerationMagnitude","fMeanBodyAccelerationMagnitudeFrequency","fMeanBodyAccelerationJerkMagnitude","fMeanBodyAccelerationJerkMagnitudeFrequency","fMeanBodyGyroMagnitude","fMeanBodyGyroMagnitudeFrequency","fMeanBodyGyroJerkMagnitude","fMeanBodyGyroJerkMagnitudeFrequency","activity","subject")
+merge(mergedMeansF, mergedMeansT,all=TRUE) -> FT
+FT[,-(1)] -> FT
+FT[,c(2, 1, 3:41,43:82)] -> FT
+write.table(FT, "analysis.txt")
+
 

@@ -1,39 +1,59 @@
-BAS_X
+STDBodyAccelerationX
 The Standard of Deviation of the X value for the Body Acceleration 
-BAS_Y
+
+STDBodyAccelerationY
 The Standard of Deviation of the Y value for the Body Acceleration 
-BAS_Z
+
+STDBodyAccelerationZ
 The Standard of Deviation  of the Z value for the Body Acceleration 
-GAS_X
+
+STDGravityAccelerationX
 The Standard of Deviation  of the X value for the Gravity Acceleration
-GAS_Y
+
+STDGravityAccelerationY
 The Standard of Deviation of the Y value for the Gravity Acceleration 
-GAS_Z
+
+STDGravityAccelerationZ
 The Standard of Deviation  of the Z value for the Gravity Acceleration 
-BAJS_X
+
+STDBodyAccelerationJerkX
 The Standard of Deviation  of the X value for the Body Acceleration Jerk
-BAJS_Y
+
+STDBodyAccelerationJerkY
 The Standard of Deviation of the Y value for the Body Acceleration Jerk
-BAJS_Z
+
+STDBodyAccelerationJerkZ
 The Standard of Deviation  of the Z value for the Body Acceleration Jerk 
-BGS_X
+
+STDBodyGyroX
 The Standard of Deviation  of the X value for the Body Gyro
-BGS_Y
+
+STDBodyGyroY
 The Standard of Deviation of the Y value for the Body Gyro
-BGS_Z
+
+STDBodyGyroZ
 The Standard of Deviation  of the Z value for the Body Gyro
-BGJS_X
+
+STDBodyGyroJerkX
 The Standard of Deviation  of the X value for the Body Gyro Jerk
-BGJS_Y
+
+STDBodyGyroJerkY
 The Standard of Deviation of the Y value for the Body Gyro Jerk
-BGJS_Z
+
+STDBodyGyroJerkZ
 The Standard of Deviation  of the Z value for the Body Gyro Jerk
-BAMS
+
+STDBodyAccelerationMagnitude
 The Standard of Deviation of the Body Acceleration Magnitude
-GAMS
+
+STDGravityAccelerationMagnitude
 The Standard of Deviation of the Gravity Acceleration Magnitude
-BAJMS
+
+STDBodyAccelerationJerkMagnitude
 The Standard of Deviation of the Body Acceleration  Jerk Magnitude
-BGMS
+
+STDBodyGyroMagnitude
 The Standard of Deviation of the Body Gyro Magnitude
-BGJMS
+
+STDGyroMagnitudeJerk
+The standard of deviation of the Body Gyro Magnitude measurement
