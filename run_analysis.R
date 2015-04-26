@@ -71,6 +71,6 @@ names(mergedMeansF) <- c("Group", "fSTDBodyAccelerationX","fSTDBodyAccelerationY
 merge(mergedMeansF, mergedMeansT,all=TRUE) -> FT
 FT[,-(1)] -> FT
 FT[,c(2, 1, 3:41,43:82)] -> FT
-write.table(FT, "analysis.txt")
+write.table(FT, "analysis.txt", row.names=FALSE)
 
 

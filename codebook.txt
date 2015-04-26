@@ -1,59 +1,128 @@
-STDBodyAccelerationX
-The Standard of Deviation of the X value for the Body Acceleration 
+[1] "activity" 
+This variable has six potential values based off of the activities subjects were asked to perform: walking upstairs, walking downstairs, walking, standing, sitting, and laying.                                  
+ 
+[2] "subject"  
+This variable identifies the participant from 1-30. 
+                                
+ [3] "fSTDBodyAccelerationX"                      
+ [4] "fSTDBodyAccelerationY"                      
+ [5] "fSTDBodyAccelerationZ"  
+These three make up the mean of the Standard of Deviation measures for the XYZ coordinates of Body Acceleration this is measured in frequency and the mean was calculated per subject. The Fast Fourier Transform was used to create these. 
+                    
+ [6] "fSTDGravityAccelerationX,"                  
+ [7] "fSTDGravityAccelerationY"                   
+ [8] "fSTDGravityAccelerationZ"    
+These three make up the Standard of Deviation measures for the XYZ coordinates of Gravity Acceleration this is measured in frequency and the mean was calculated per subject.
+               
+ [9] "fSTDBodyAccelerationJerkX"                  
+[10] "fSTDBodyAccelerationJerkY"                  
+[11] "fSTDBodyAccelerationJerkZ"
+ These three make up the Standard of Deviation measures for the XYZ coordinates of Body Acceleration Jerk measure this is measured in frequency and the mean was calculated per subject.   
+             
+[12] "fSTDBodyGyroX"                              
+[13] "fSTDBodyGyroY"                              
+[14] "fSTDBodyGyroZ"
+ These three make up the Standard of Deviation measures for the XYZ coordinates of Body Gyro measure this is measured in frequency  and the mean was calculated per subject.
+                              
+[15] "fSTDBodyGyroJerkX"                          
+[16] "fSTDBodyGyroJerkY"                          
+[17] "fSTDBodyGyroJerkZ"   
+ These three make up the Standard of Deviation measures for the XYZ coordinates of Body Gyro Jerk measure this is measured in frequency  and the mean was calculated per subject.
+                       
+[18] "fSTDBodyAccelerationMagnitude"    
+This is the mean of the magnitude Body Acceleration Standard of Deviation and the mean was calculated per subject.
+           
+[19] "fSTDBodyAccelerationJerkMagnitude”
+This is the mean of the magnitude Body Acceleration Jerk Standard of Deviation    and the mean was calculated per subject.  
+    
+[20] "fSTDBodyGyroMagnitude"
+This is the mean of the magnitude Body Acceleration Jerk Standard of Deviation and the mean was calculated per subject.
+                      
+[21] "fSTDGyroMagnitudeJerk"
+This is the mean of the magnitude Body Acceleration Jerk Standard of Deviation and the mean was calculated per subject.
+                    
+[22] "fMeanBodyAccelerationFrequencyX"            
+[23] "fMeanBodyAccelerationFrequencyY"            
+[24] "fMeanBodyAccelerationFrequencyZ"  
+These three make up the mean of the frequency(statistical not unit) measures for the XYZ coordinates of Body Acceleration this is measured in frequency and the mean was calculated per subject.
+          
+[25] "fMeanBodyAccelerationJerkX"                 
+[26] "fMeanBodyAccelerationJerkY"                 
+[27] "fMeanBodyAccelerationJerkZ" 
+These three make up the mean of all the mean of the  measures for the XYZ coordinates of Body Acceleration Jerk this is measured in frequency and the mean was calculated per subject.
+                          
+[28] "fMeanBodyGyroX"                             
+[29] "fMeanBodyGyroY"                             
+[30] "fMeanBodyGyroZ"   
+These three make up the mean of all the mean of the measures for the XYZ coordinates of Body Gyro this is measured in frequency and the mean was calculated per subject.
+                          
+[31] "fMeanBodyGyroFreqX"                         
+[32] "fMeanBodyGyroFreqY"                         
+[33] "fMeanBodyGyroFreqZ"  
+These three make up the mean of all the mean of the measures for the XYZ coordinates of Body Gyro this is measured in frequency and the mean was calculated per subject.
+                       
+[34] "fMeanBodyAccelerationMagnitude" 
+This is the mean of the magnitude Body Acceleration Mean and the mean was calculated per subject the unit of measure is frequency.            
+[35] "fMeanBodyAccelerationMagnitudeFrequency"
+This is the mean of the magnitude Body Acceleration Mean Frequency (statistical not measure) and the mean was calculated per subject the unit of measure is frequency.
+     
+[36] "fMeanBodyAccelerationJerkMagnitude"  
+This is the mean of the magnitude Body AccelerationJerk Mean and the mean was calculated per subject the unit of measure is frequency.
+       
+[37] "fMeanBodyAccelerationJerkMagnitudeFrequency"
+This is the mean of the magnitude Body Acceleration Jerk Mean Frequency (statistical not measure) and the mean was calculated per subject the unit of measure is frequency.
 
-STDBodyAccelerationY
-The Standard of Deviation of the Y value for the Body Acceleration 
-
-STDBodyAccelerationZ
-The Standard of Deviation  of the Z value for the Body Acceleration 
-
-STDGravityAccelerationX
-The Standard of Deviation  of the X value for the Gravity Acceleration
-
-STDGravityAccelerationY
-The Standard of Deviation of the Y value for the Gravity Acceleration 
-
-STDGravityAccelerationZ
-The Standard of Deviation  of the Z value for the Gravity Acceleration 
-
-STDBodyAccelerationJerkX
-The Standard of Deviation  of the X value for the Body Acceleration Jerk
-
-STDBodyAccelerationJerkY
-The Standard of Deviation of the Y value for the Body Acceleration Jerk
-
-STDBodyAccelerationJerkZ
-The Standard of Deviation  of the Z value for the Body Acceleration Jerk 
-
-STDBodyGyroX
-The Standard of Deviation  of the X value for the Body Gyro
-
-STDBodyGyroY
-The Standard of Deviation of the Y value for the Body Gyro
-
-STDBodyGyroZ
-The Standard of Deviation  of the Z value for the Body Gyro
-
-STDBodyGyroJerkX
-The Standard of Deviation  of the X value for the Body Gyro Jerk
-
-STDBodyGyroJerkY
-The Standard of Deviation of the Y value for the Body Gyro Jerk
-
-STDBodyGyroJerkZ
-The Standard of Deviation  of the Z value for the Body Gyro Jerk
-
-STDBodyAccelerationMagnitude
-The Standard of Deviation of the Body Acceleration Magnitude
-
-STDGravityAccelerationMagnitude
-The Standard of Deviation of the Gravity Acceleration Magnitude
-
-STDBodyAccelerationJerkMagnitude
-The Standard of Deviation of the Body Acceleration  Jerk Magnitude
-
-STDBodyGyroMagnitude
-The Standard of Deviation of the Body Gyro Magnitude
-
-STDGyroMagnitudeJerk
-The standard of deviation of the Body Gyro Magnitude measurement
+[38] "fMeanBodyGyroMagnitude"   
+This is the mean of the magnitude Body Gyro and the mean was calculated per subject the unit of measure is frequency.
+                  
+[39] "fMeanBodyGyroMagnitudeFrequency"  
+This is the mean of the magnitude Body Gyro Mean Frequency (statistical not measure) and the mean was calculated per subject the unit of measure is frequency.
+          
+[40] "fMeanBodyGyroJerkMagnitude"   
+This is the mean of the magnitude Body Gyro Jerk and the mean was calculated per subject the unit of measure is frequency.
+              
+[41] "fMeanBodyGyroJerkMagnitudeFrequency"
+This is the mean of the magnitude Body Gyro Jerk Mean Frequency (statistical not measure) and the mean was calculated per subject the unit of measure is frequency.     
+                                           
+[43] "tSTDBodyAccelerationX"                      
+[44] "tSTDBodyAccelerationY"                      
+[45] "tSTDBodyAccelerationZ"
+These three make up the mean of the Standard of Deviation measures for the XYZ coordinates of Body Acceleration this was captured by time domain signals at a constant rate of 50hz and the mean was calculated per subject and activity.
+                      
+[46] "tSTDGravityAccelerationX"                   
+[47] "tSTDGravityAccelerationY"                   
+[48] "tSTDGravityAccelerationZ"                   
+[49] "tSTDBodyAccelerationJerkX"                  
+[50] "tSTDBodyAccelerationJerkY"                  
+[51] "tSTDBodyAccelerationJerkZ"                  
+[52] "tSTDBodyGyroX"                              
+[53] "tSTDBodyGyroY"                              
+[54] "tSTDBodyGyroZ"                              
+[55] "tSTDBodyGyroJerkX"                          
+[56] "tSTDBodyGyroJerkY"                          
+[57] "tSTDBodyGyroJerkZ"                          
+[58] "tSTDBodyAccelerationMagnitude"              
+[59] "tSTDGravityAccelerationMagnitude"           
+[60] "tSTDBodyAccelerationJerkMagnitude"          
+[61] "tSTDBodyGyroMagnitude"                      
+[62] "tSTDGyroMagnitudeJerk"                      
+[63] "tMeanBodyAccelerationX"                     
+[64] "tMeanBodyAccelerationY"                     
+[65] "tMeanBodyAccelerationZ"                     
+[66] "tMeanGravityAccelerationX"                  
+[67] "tMeanGravityAccelerationY"                  
+[68] "tMeanGravityAccelerationZ"                  
+[69] "tMeanBodyAccelerationJerkX"                 
+[70] "tMeanBodyAccelerationJerkY"                 
+[71] "tMeanBodyAccelerationJerkZ"                 
+[72] "tMeanBodyGyroX"                             
+[73] "tMeanBodyGyroY"                             
+[74] "tMeanBodyGyroZ"                             
+[75] "tMeanBodyGyroJerkX"                         
+[76] "tMeanBodyGyroJerkY"                         
+[77] "tMeanBodyGyroJerkZ"                         
+[78] "tMeanBodyAccelerationMagnitude"             
+[79] "tMeanGravityAccelerationMagnitude"          
+[80] "tMeanBodyAccelerationJerkMagnitude"         
+[81] "tMeanBodyGyroMagnitude"                     
+[82] "tMeanGyroMagnitudeJerk"
